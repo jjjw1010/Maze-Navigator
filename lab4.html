@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ECE 3400 by jj733</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mycode.css" media="screen">
+
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 4</h1>
+      <p>RF comms & Navigation</p>
+      <h2 class="project-tagline"></h2>
+   
+      <a href="index.html" class="btn">Home</a>
+
+      <a href="lab1.html" class="btn">Lab 1</a>
+      
+      <a href="lab2.html" class="btn">Lab 2</a>
+      
+      <a href="lab3.html" class="btn">Lab 3</a>
+      
+      <a href="lab4.html" class="btn">Lab 4</a>
+    </section>
+
+    <section class="main-content">
+      <h3>Summary </h3>  
+      <p>
+      There were two main goals for lab 4. The first one was to work on the RF Communication between the Robot and the Base Station.
+      The second one was to combine our codes from lab 1 through lab 4 so that our robot and base station would
+      hold all functionality used in all these labs. A more detailed list of the second main goal is shown below.
+      </p>
+      <p></p>
+      <ol>
+      <li>Implement Right Wall Following Navigation Algorithm using lab 1 as a starting point </li>
+      <li>Install an override start button </li>
+      <li>Include ultrasonic sensor functionality </li>
+      <li>Include phototransistor functionality</li>
+      <li>Include RF communication functionality </li>
+      <li>Display the frequency obtain from the phototransistor in the base station through the RF communication and 7-seg display </li>
+      <li>Include microphone functionality </li>
+      <li>Finalize our onboard FFT </li>
+      </ol>
+      <p>
+      All these functionalities were for the purpose of navigating through the maze and finding treasures.
+      <ul>
+      <li>The FFT would be used to detect the starting note of the melody using the microphone functionality that would make the robot to start moving and navigating through the maze. </li>
+        <li>If FFT fails, the override start button would be used. </li>
+        <li>The ultrasonic sensor would be used as part of the navigation process. </li>
+          <li>The phototransistors are used to find treasures which are unique frequency generators. </li>
+         <li>The frequency found from the phototransistors would be sent to the base station using the RF communication devices </li>
+        <li>The frequency value would displayed in the base station. </li>
+        <li>The robot would stop navigating once all treasures are found. </li>
+      </ul>
+      </p>
+      <p></p>
+      <h3> Detailed Summary of the Process of the Summary </h3>
+      <p></p>
+      <p> 
+        When implementing the RF Communication between the Robot and the Base Station we first construct two 
+       RF communication devices and connected them to the Robot and the Base Station. Each RF communication devices 
+       consisted of 4-pin and 3-pin that has been snapped off from row of headers, PCB adapters, RF transceiver,
+       8-pin header receptacle and RF PCB adapter. Each RF communication device was made by using RF PCB 
+       adapter as the base, soldering the necessary pins onto the device, then attaching rest of the components 
+       onto the pins. We finally attached each RF communication devices directly onto The Robot and the Base Station and
+       then connected the rest of the pins on the RF communication device using jumper wires. 
+       The RF communication device is shown in bottom left of the breadboard in figure 1 for the robot.
+       The RF communication device is shown in top right of the breadboard in figure 4 for the base station.
+        
+    
+    </p>
+      <p> Afterwards, we implemented our RF communication codes into the base station and the Robot and tested if it
+      worked and debugged from there. </p>
+      <p></p>
+      <p> 
+        We have spent some time from fixing our the wiring of our robot and base station to make our robot look neater 
+        and make replacement of individual parts easier as shown in Figure 1~5. There were two cases in which we had to switch out 
+        our US sensors and our Arduino Nano Every because they started malfunctioning. Having a clean 
+        wiring made the replacement easier. </p>
+      <p></p>
+      <p> 
+        We then implemented the right wall following navigation code in which the robot would prioritize right turn every time a right turn is possible, 
+       else it would keep going forward and if moving forward is no longer available it would turn left. If turning right, moving forward, turning left is 
+        not available, it would perform a one hundred eighty degree turn. 
+        In this part of the process, the robot would mainly rely on the servos and us sensors.
+        This process is shown in figure 6.
+      </p>
+      <p></p>
+      <p>
+       We then included an override button in the Robot so that the robot would start navigating as soon as the override button is pressed. 
+      </p>
+      <p></p>
+      <p> 
+       We then attempted to implement our FFT code in which the Robot would start moving when a specific note is played in the melody. 
+       We were trying to make the Robot start navigating when the note 950 Hz was played.
+      </p>
+      <p></p>
+      <p>
+       Then we combine our RF communication funcationality, phototransistor functionality and navigation so that we would be able to pick up 
+       the frequency value through the phototransistor once the robot gets close to the treasure as the robot was navigating through the maze and send that
+       frequency value using RF communication funcationality. 
+       </p>
+      <p></p>
+      <p>
+        Finally, we fixed our Base Station code so that it would be able to display through 7-segement display that values it receive.
+        Once the robot finishes finding all treasures, which was two for our case, the robot would stop moving and blink through the built-in arduino LED.
+        This was the end of lab 4 for us. 
+    </p>
+
+      
+      <h3>Visuals</h3>  
+      <p>Visuals are full of the final product of robot and base station with all the functionality included</p>
+      
+      <img src="pictures/lab4pictures/RobotPic1.jpg" alt="Image" height="600" width="200" class = "center">
+      <p> Figure 1: Display of the Robot with all its funtionality wired </p>
+      
+      <img src="pictures/lab4pictures/RobotPic2.jpg" alt="Image" height="600" width="200" class = "center">
+      <p> Figure 2: Display of the Robot at a different angle with all its funtionality wired </p>
+
+      <img src="pictures/lab4pictures/RobotPic3.jpg" alt="Image" height="400" width="600" class = "center">
+      <p> Figure 3: Display of the Robot at a different angle with all its funtionality wired </p>
+
+      <img src="pictures/lab4pictures/BasePic1.jpg" alt="Image" height="600" width="200" class = "center">
+      <p> Figure 4: Display of the Base Station with all its funtionality wired </p>
+
+      <img src="pictures/lab4pictures/BasePic2.jpg" alt="Image" height="600" width="200" class = "center">
+      <p> Figure 5: Display of the Base Station at a different angle with all its funtionality wired </p>
+
+      <video width="250" height="600" class = "center" controls><source src= "pictures/lab4pictures/nav.mov" type="video/mp4"></video>
+      <p> Figure 6: Video of the Robot trying to navigate through the maze with the right wall following navigation </p>
+
+      
+      
+
+      <h3>Reflection</h3>  
+      <p>
+      I believe that this lab was the hardest lab out of the four labs. A lot of time were spent debugging 
+      the code because even though our code seemed to work individually by themselves, (such as the the microphone 
+      code functionality by itself, the phototransister code functionality by itself, etc..) once we were trying to 
+      piece everything together, the code seemed to conflict with one another. 
+      </p>
+      
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.coecis.cornell.edu/jj733/jj733.github.io">ECE 3400</a> is maintained by <a href="https://github.coecis.cornell.edu/jj733">jj733</a>.</span>
+
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

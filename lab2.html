@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ECE 3400 by jj733</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mycode.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 2</h1>
+      <p> Phototransistors & Display </p>
+      <h2 class="project-tagline"></h2>
+       
+      <a href="index.html" class="btn">Home</a>
+
+      <a href="lab1.html" class="btn">Lab 1</a>
+      
+      <a href="lab2.html" class="btn">Lab 2</a>
+      
+      <a href="lab3.html" class="btn">Lab 3</a>
+      
+      <a href="lab4.html" class="btn">Lab 4</a>
+    </section>
+
+    <section class="main-content">
+       <h3> Summary </h3>
+      
+      <p> For Lab 2, for two weeks, my lab partner and I worked on the treasure detection aspect of "The Robot". <p> </p>
+          
+          In the first week, we built a simple IR light detection circuit with phototransistor on "The Robot" as shown in Figure 1 and Figure 2.
+           Then we built a simple IR light emitting circuit using the signal generator on a separate breadboard which is also shown in Figure 1 and Figure 2.
+          We also tested our IR detection circuit with the oscilloscope as shown in Figure 3 and Figure 4. 
+          After that, we tested our IR detection circuit with the Arduino Nano Every as shown in Figure 5. 
+          Finally, we built the other two IR light detection circuits on "The Robot"'s breadboard.
+        The specifications of what we did is shown in each figure descriptions. <p> </p>
+          
+          In the second week, My lab partner and I built a display component of the base station on a separate breadboard.  
+          We also tested our display base station circuitry as shown in Figure 6. The specifications of what we did is shown in figure description.
+          
+        </p>
+      
+          <h3> Pictures </h3>
+       <img src="pictures/lab2pictures/IRDetectionLab.jpg" alt="Image" height="400" width="200" class = "center">
+             <p> Figure 1. The IR detection circuit is shown on "The Robot". 
+               The IR emission circuit is shown on the separate circuit board on the right.
+               The IR detection circuit consists of phototransistors and 2k Ohm resistor.
+               The IR emission circuit consists of IR LED and a 60 Ohm resistor. </p>
+      
+             <img src="pictures/lab2pictures/IRcloseup.jpg" alt="Image" height="400" width="200" class = "center">
+      <p> Figure 2. This is a close up of Figure 1. </p>
+
+             <img src="pictures/lab2pictures/Detected.jpg" alt="Image" height="400" width="200" class = "center">
+      <p> Figure 3. This is a picture of the signal shown in the oscilloscope when the IR LED is close to the phototransistor on "The Robot".
+        Figure 1 and 2 are examples of when the IR LED is close to the phototransistor. </p>
+      
+             <img src="pictures/lab2pictures/NotDetected.jpg" alt="Image" height="400" width="200" class = "center">
+      <p> Figure 4. This is a picture of the signal in the oscilloscope when the IR LED is far away from the phototransistor on "The Robot".</p>
+      
+       <img src="pictures/morelab2pics/SerialMonitorDisplay.png" alt="Image" height="700" width="200" class = "center">
+      <p> Figure 5. This is the serial monitor of the frequency data that the Arduino Nano Every is picking up from reading
+        the frequency of the blinking IR LED from the phototransistor. </p>
+      
+      
+       <img src="pictures/morelab2pics/SevenSeg.jpg" alt="Image" height="400" width="200" class = "center">
+      <p> Figure 6. This is a base station that has been built which consists of a shift register, 4-digit 7-Segment Display, resistors, Arduino Nano Every and transistors.
+      This base station will be used to display the wirelessly transmitted data of the frequency of a treasure that "The Robot" has measured throught the phototransistor.</p>
+      
+
+      
+      <h3> Reflection/ Final Thoughts </h3>
+      <p> This part of the lab was much shorter than Lab 1 but I feel like this lab is also the most interesting lab so far. 
+    Also, 2 other IR detection circuits were built left and right side of "The Robot" and the functionality of the base station was tested by making it 
+    display the numbers 2468 to show that the circuit was functional. </p>
+      
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.coecis.cornell.edu/jj733/jj733.github.io">ECE 3400</a> is maintained by <a href="https://github.coecis.cornell.edu/jj733">jj733</a>.</span>
+
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

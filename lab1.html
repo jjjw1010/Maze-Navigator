@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ECE 3400 by jj733</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mycode.css" media="screen">
+
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 1</h1>
+      <p>Intro to the Arduino, Servos & US Sensors </p>
+      <h2 class="project-tagline"></h2>
+       
+      <a href="index.html" class="btn"> Home </a>
+
+      <a href="lab1.html" class="btn"> Lab 1 </a>
+      
+      <a href="lab2.html" class="btn"> Lab 2 </a>
+      
+      <a href="lab3.html" class="btn"> Lab 3 </a>
+      
+      <a href="lab4.html" class="btn"> Lab 4 </a>
+    </section>
+
+    <section class="main-content">
+      <h3> Summary </h3>
+      
+        <p> 
+          For this lab, my lab partner and I first had to attach the basic framework to the robot, attaching servo motors, wheels and batteries.
+          The wheels that were used were caster wheel and two regular wheels.
+          The batteries that were used were 9V battery to power the Arduino and 3 AA batteries to power our servos and Ultrasonic (US) sensors. 
+          Then we hooked up our breadboard, our Arduino Nano Every, US Sensors onto "The Robot". 
+          We wired up each components of US Sensors, servo motors and the batteries to the Arduino Nano Every using the breadboard.
+          This final build of "The Robot" is shown in Figure 1 in the Picture Secition.
+        </p>
+        
+        <p> 
+          After building our robots, we programmed our arduino so that our servo motors were working properly through, checking its left and right turns.
+          We were also able to confirm this through the exercise shown in Figure 2.
+          We also checked if 3 US sensors were working properly checking its relatively distance. 
+          Then, finally we programmed our Arduino so that it would sucessfully go through the maze as shown in the Figure 3. 
+        </p>
+      
+          <h3> Pictures </h3>
+      
+          <p> Pictures of "The Robot" , serial monitor snippets and video from section 9 ("The Robot" going through the maze) are shown below. </p>
+      
+          <img src="pictures/lab1pictures/robatforlab1.jpg" alt="Image" height="400" width="200" class = "center">
+             <p> Figure 1. This is the final product of building "The Robot" in Lab 1. </p>
+      
+          <video width="320" height="240" class = "center" controls>
+          <source src= "pictures/lab1pictures/servodemo.mov" type="video/mp4">
+           <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+            <p> Figure 2. This is a video of us demontrating if the servo motors were working properly.
+                What we looked for in this exercise was if "The Robot" was able to turn left and right in place in addition to
+                following the directions shown below:
+                <ol>
+                  <li>Starts in place facing north, motionless </li>
+                  <li>After 5 seconds, it goes north over approximately 20 cm, then stops, still facing north. </li>
+                  <li>After 1 second, it turns to its right towards the east in place by approximately 90 degrees, then stops, facing east. </li>
+                  <li>After 1 second, it turns to its left in place by 270 degrees, then stops, facing south. </li>
+                  <li>After 1 second, it goes south over approximately 20 cm, then stops, facing south. </li>
+                  <li>After 1 second, it turns to its right by 180 degrees, then stops, facing north. </li>
+                  
+                 </ol>
+            </p>
+      
+           <video width="320" height="240" class = "center" controls>
+            <source src= "pictures/lab1pictures/sectionnined.mov" type="video/mp4">
+           
+             </video>
+          <p> 
+            Figure 3. This is video of "The Robot" going through the maze and coming back out in one piece.
+              "The Robot" firsts go through the maze as when it comes back out to the spot it began from it
+              performs a 540 degree turn and stops moving. The precise directions are shown below:
+             <ol>
+               <li>Start in position 1, immobile.  </li>
+               <li>Once you press the RESET button on the Nano, it will remain motionless for 1 second, then head North towards position 2. </li>
+               <li>Once at position 2, it will turn smoothly in place to its left to face West, then navigate towards position 3. </li>
+               <li>Once at position 3, it will turn smoothly in place to its left to face South, then navigate towards position 4. </li>
+               <li>Once at position 4, it will turn smoothly in place to its right to face North, then navigate towards position 3. </li>
+               <li>Once at position 3, it will turn smoothly in place to its right to face East, then navigate towards position 2. </li>
+               <li>Once at position 2, it will turn smoothly in place to its right to face South, then navigate towards position 1. </li>
+               <li>Once at position 1, it will turn smoothly in place to its left 540 degrees (1 ½ turns) ending facing North where it will remain in place stationary. </li>
+               </ol>
+           </p>
+      
+      <video width="320" height="240" class = "center" controls>
+          <source src= "pictures/lab1pictures/serialmonitor.mov" type="video/mp4">
+           <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+      
+      <p> Figure 4. This is video of the serial monitor. This video shows proof that the robot acquires data from the Ultrasonic Sensors and
+        executes based on it. </p>
+      
+      <h3> Reflection/ Final Thoughts </h3>
+      <p>
+        In preparation for the next lab, I would probably try to make the wiring a bit more organized and also I would try to 
+        fix up the wheels because it does seem a bit wobbly.
+      </p>
+      
+      
+              
+            
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.coecis.cornell.edu/jj733/jj733.github.io">ECE 3400</a> is maintained by <a href="https://github.coecis.cornell.edu/jj733">jj733</a>.</span>
+
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
